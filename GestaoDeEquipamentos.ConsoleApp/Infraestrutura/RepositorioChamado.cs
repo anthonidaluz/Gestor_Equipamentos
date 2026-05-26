@@ -1,71 +1,59 @@
 ﻿using GestaoDeEquipamentos.ConsoleApp.Dominio;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace GestaoDeEquipamentos.ConsoleApp.Infraestrutura
+namespace GestaoDeEquipamentos.ConsoleApp.Infraestrutura;
+
+public class RepositorioChamado
 {
-    public class RepositorioChamado
+    private Chamado[] chamadosSalvos = new Chamado[100];
+
+    public void Cadastrar(Chamado novoChamado)
     {
-        private int contadorIdsChamados = 1;
-        private Chamado[] chamadosSalvos = new Chamado[100];
-
-        public void Cadastrar(Chamado novoChamado)
+        for (int i = 0; i < chamadosSalvos.Length; i++)
         {
-            novoChamado.id = contadorIdsChamados++;
-
-            for (int i = 0; i < chamadosSalvos.Length; i++)
+            if (chamadosSalvos[i] == null)
             {
-                if (chamadosSalvos[i] == null)
-                {
-                    chamadosSalvos[i] = novoChamado;
-                    break;
-
-                }
+                chamadosSalvos[i] = novoChamado;
+                break;
             }
-
-        }
-
-        public void Editar(int idSelecionado, Chamado chamadoAtualizado)
-        {
-            for (int i = 0; i < chamadosSalvos.Length; i++)
-            {
-                Chamado chamadoSelecionado = chamadosSalvos[i];
-
-                if (chamadoSelecionado == null)
-                    continue;
-
-                if (chamadoSelecionado.id == idSelecionado)
-                {
-                    chamadoSelecionado.titulo = chamadoAtualizado.titulo;
-                    chamadoSelecionado.descricao = chamadoAtualizado.descricao;
-                    chamadoSelecionado.equipamento = chamadoAtualizado.equipamento;
-                    break;
-                }
-            }
-        }
-
-        public void Excluir(int idSelecionado)
-        {
-            for (int i = 0; i < chamadosSalvos.Length; i++)
-            {
-                Chamado chamadoSelecionado = chamadosSalvos[i];
-
-                if (chamadoSelecionado == null)
-                    continue;
-
-                if (chamadoSelecionado.id == idSelecionado)
-                {
-                    chamadosSalvos[i] = null;
-                    break;
-                }
-            }
-        }
-
-        public Chamado[] SelecionarTodos()
-        {
-            return chamadosSalvos;
         }
     }
 
+    public void Editar(int idSelecionado, Chamado chamadoAtualizado)
+    {
+        for (int i = 0; i < chamadosSalvos.Length; i++)
+        {
+            Chamado chamadoSelecionado = chamadosSalvos[i];
+
+            if (chamadoSelecionado == null)
+                continue;
+
+            if (chamadoSelecionado.Id == idSelecionado)
+            {
+                chamadoSelecionado.Atualizar(chamadoAtualizado);
+                break;
+            }
+        }
+    }
+
+    public void Excluir(int idSelecionado)
+    {
+        for (int i = 0; i < chamadosSalvos.Length; i++)
+        {
+            Chamado chamadoSelecionado = chamadosSalvos[i];
+
+            if (chamadoSelecionado == null)
+                continue;
+
+            if (chamadoSelecionado.Id == idSelecionado)
+            {
+                chamadosSalvos[i] = null;
+                break;
+            }
+        }
+    }
+
+    public Chamado[] SelecionarTodos()
+    {
+        return chamadosSalvos;
+    }
 }

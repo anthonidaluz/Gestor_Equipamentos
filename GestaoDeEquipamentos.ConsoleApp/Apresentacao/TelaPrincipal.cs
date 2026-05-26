@@ -1,28 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace GestaoDeEquipamentos.ConsoleApp.Apresentacao;
 
-namespace GestaoDeEquipamentos.ConsoleApp.Apresentacao
+public class TelaPrincipal
 {
-    internal class TelaPrincipal
+    public string? ObterOpcaoMenuPrincipal()
     {
-        public string? ObterOpcaoMenuPrincipal()
-        {
-            // Console.Clear();
-            Console.WriteLine("---------------------------------");
-            Console.WriteLine("Gestão de Equipamentos");
-            Console.WriteLine("---------------------------------");
-            Console.WriteLine("1 - Controle de equipamentos");
-            Console.WriteLine("2 - Controle de chamados");
-            Console.WriteLine("S - Sair");
-            Console.WriteLine("---------------------------------");
-            Console.Write("> ");
-            string? opcaoMenuPrincipal = Console.ReadLine()?.ToUpper();
+        // Console.Clear();
+        Console.WriteLine("---------------------------------");
+        Console.WriteLine("Gestão de Equipamentos");
+        Console.WriteLine("---------------------------------");
+        Console.WriteLine("1 - Controle de equipamentos");
+        Console.WriteLine("2 - Controle de chamados");
+        Console.WriteLine("S - Sair");
+        Console.WriteLine("---------------------------------");
+        Console.Write("> ");
+        string? opcaoMenuPrincipal = Console.ReadLine()?.ToUpper();
 
-            return opcaoMenuPrincipal;
-
-        }
-
-
+        return opcaoMenuPrincipal;
     }
 }
