@@ -1,5 +1,6 @@
 <img width="1080" height="600" alt="VsDebugConsole_GXYboTIL7t" src="https://github.com/user-attachments/assets/fd897dd3-fee8-4079-9af3-d009c48da89b" />
-# Gestão de Equipamentos
+
+Gestão de Equipamentos
 
 Junior cuida do estoque de equipamentos na empresa onde trabalha. E sempre controla o inventário dos seus equipamentos e as manutenções que eles já sofreram em uma planilha do Excel.
 
