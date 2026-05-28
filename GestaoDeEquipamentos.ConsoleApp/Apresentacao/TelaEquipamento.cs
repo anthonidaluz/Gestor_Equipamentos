@@ -9,7 +9,6 @@ public class TelaEquipamento
 
     public string? ObterOpcaoMenu()
     {
-        // Console.Clear();
         Console.WriteLine("---------------------------------");
         Console.WriteLine("Controle de Equipamentos");
         Console.WriteLine("---------------------------------");
@@ -138,7 +137,6 @@ public class TelaEquipamento
 
         Equipamento[] equipamentosSalvos = repositorioEquipamento.SelecionarTodos();
 
-        // tabela do console
         Console.WriteLine(
             "{0, -7} | {1, -15} | {2, -20} | {3, -15}",
             "Id", "Nome", "Preço de Aquisição", "Data de Fabricação"

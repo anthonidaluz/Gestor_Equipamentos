@@ -32,19 +32,16 @@ public class TelaChamado
         Console.WriteLine("Cadastro de Chamado");
         Console.WriteLine("---------------------------------");
 
-        // Obtenção dos Dados
         Console.Write("Digite o título do chamado: ");
         string titulo = Console.ReadLine();
 
         Console.Write("Digite a descrição do chamado: ");
         string descricao = Console.ReadLine();
 
-        // Apresentar os equipamentos cadastrados
         Console.WriteLine("---------------------------------");
 
         Equipamento[] equipamentosSalvos = repositorioEquipamento.SelecionarTodos();
 
-        // tabela do console
         Console.WriteLine(
             "{0, -7} | {1, -15} | {2, -20} | {3, -15}",
             "Id", "Nome", "Preço de Aquisição", "Data de Fabricação"
@@ -65,7 +62,6 @@ public class TelaChamado
 
         Console.WriteLine("---------------------------------");
 
-        // Pedir para o usuário selecionar o ID do equipamento desejado
         Console.Write("Digite o id do equipamento que deseja selecionar: ");
         int idEquipamentoSelecionado = Convert.ToInt32(Console.ReadLine());
 
@@ -101,7 +97,6 @@ public class TelaChamado
 
         Chamado[] chamadosSalvos = repositorioChamado.SelecionarTodos();
 
-        // Tabela
         Console.WriteLine(
             "{0, -7} | {1, -15} | {2, -30} | {3, -17} | {4, -15}",
             "Id", "Título", "Descrição", "Data de Abertura", "Equipamento"
@@ -134,12 +129,10 @@ public class TelaChamado
         Console.Write("Digite a descrição do chamado: ");
         string descricao = Console.ReadLine();
 
-        // Apresentar os equipamentos cadastrados
         Console.WriteLine("---------------------------------");
 
         Equipamento[] equipamentosSalvos = repositorioEquipamento.SelecionarTodos();
 
-        // tabela do console
         Console.WriteLine(
             "{0, -7} | {1, -15} | {2, -20} | {3, -15}",
             "Id", "Nome", "Preço de Aquisição", "Data de Fabricação"
@@ -160,7 +153,6 @@ public class TelaChamado
 
         Console.WriteLine("---------------------------------");
 
-        // Pedir para o usuário selecionar o ID do equipamento desejado
         Console.Write("Digite o id do equipamento que deseja selecionar: ");
         int idEquipamentoSelecionado = Convert.ToInt32(Console.ReadLine());
 
@@ -196,7 +188,6 @@ public class TelaChamado
 
         Chamado[] chamadosSalvos = repositorioChamado.SelecionarTodos();
 
-        // Tabela
         Console.WriteLine(
             "{0, -7} | {1, -15} | {2, -30} | {3, -17} | {4, -15}",
             "Id", "Título", "Descrição", "Data de Abertura", "Equipamento"
@@ -237,7 +228,6 @@ public class TelaChamado
 
         Chamado[] chamadosSalvos = repositorioChamado.SelecionarTodos();
 
-        // Tabela
         Console.WriteLine(
             "{0, -7} | {1, -15} | {2, -30} | {3, -17} | {4, -15}",
             "Id", "Título", "Descrição", "Data de Abertura", "Equipamento"

@@ -3,13 +3,6 @@ using GestaoDeEquipamentos.ConsoleApp.Utilidades;
 
 namespace GestaoDeEquipamentos.ConsoleApp.Dominio;
 
-/*
-    • Deve ter um identificador único (id);
-    • Deve ter a título do chamado;
-    • Deve ter a descrição do chamado;
-    • Deve ter uma data de abertura;
-    • Deve ter um equipamento;
-*/
 public class Chamado
 {
     public int Id { get; private set; }

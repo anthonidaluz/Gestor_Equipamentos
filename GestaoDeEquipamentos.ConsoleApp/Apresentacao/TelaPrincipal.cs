@@ -4,7 +4,6 @@ public class TelaPrincipal
 {
     public string? ObterOpcaoMenuPrincipal()
     {
-        // Console.Clear();
         Console.WriteLine("---------------------------------");
         Console.WriteLine("Gestão de Equipamentos");
         Console.WriteLine("---------------------------------");

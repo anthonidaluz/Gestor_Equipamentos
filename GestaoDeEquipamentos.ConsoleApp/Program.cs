@@ -15,7 +15,6 @@ telaChamado.repositorioEquipamento = repositorioEquipamento;
 
 while (true)
 {
-    // Apresenta um menu principal com as opções de controle
     string? opcaoMenuPrincipal = telaPrincipal.ObterOpcaoMenuPrincipal();
 
     if (opcaoMenuPrincipal == "S")
@@ -36,7 +35,6 @@ while (true)
                 break;
             }
 
-            // Operações CRUD - Create, Retrieve, Update, Delete
             if (opcaoMenu == "1")
                 telaEquipamento.Cadastrar();
 
@@ -60,7 +58,6 @@ while (true)
                 break;
             }
 
-            // Operações CRUD - Create, Retrieve, Update, Delete
             if (opcaoMenu == "1")
                 telaChamado.Cadastrar();
 

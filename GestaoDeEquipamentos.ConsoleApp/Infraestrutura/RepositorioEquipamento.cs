@@ -2,7 +2,7 @@
 
 namespace GestaoDeEquipamentos.ConsoleApp.Infraestrutura;
 
-public class RepositorioEquipamento // armazém / recipiente
+public class RepositorioEquipamento 
 {
     private Equipamento[] equipamentosSalvos = new Equipamento[100];
 
